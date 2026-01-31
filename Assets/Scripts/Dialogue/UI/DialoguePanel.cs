@@ -135,8 +135,7 @@ public class DialoguePanel : MonoBehaviour
             }
         }
 
-        if (!cts.IsCancellationRequested)
-            dialogueSentenceText.maxVisibleCharacters = totalVisibleCharacters;
+        dialogueSentenceText.maxVisibleCharacters = totalVisibleCharacters;
     }
 
     private void CancelToken()

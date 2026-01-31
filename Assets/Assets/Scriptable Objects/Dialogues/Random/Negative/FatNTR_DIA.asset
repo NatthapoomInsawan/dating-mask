@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5434c58369128c648a5bfbb671206e59, type: 3}
+  m_Name: FatNTR_DIA
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  sceneBackground: {fileID: -1768854372134492381, guid: fb39f8dc8443856428e0007630222494, type: 3}
+  characters:
+  - {fileID: 11400000, guid: af7f22580b48eeb48a6a51bde2a5e434, type: 2}
+  dialogueSentences:
+  - rid: 4981921987577249863
+  - rid: 4981921987577249864
+  references:
+    version: 2
+    RefIds:
+    - rid: 4981921987577249863
+      type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
+      data:
+        CharacterName: Fat
+        ExpressionKey: 0
+        SentenceText: '<sprite name="Person"> <sprite name="Smug"><sprite name="!">  '
+        Choices:
+        - ChoiceKey: Happy
+          ResponseExpressionKey: 0
+          ResponseText: 
+          choiceEvents:
+          - Type: 0
+            Value: -10
+        - ChoiceKey: Sad
+          ResponseExpressionKey: 0
+          ResponseText: 
+          choiceEvents:
+          - Type: 0
+            Value: -10
+        - ChoiceKey: Angry
+          ResponseExpressionKey: 2
+          ResponseText: 
+          choiceEvents:
+          - Type: 2
+            Value: -10
+        - ChoiceKey: Neutral
+          ResponseExpressionKey: 0
+          ResponseText: 
+          choiceEvents:
+          - Type: 0
+            Value: -10
+        characterNames:
+        - Fat
+    - rid: 4981921987577249864
+      type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
+      data:
+        CharacterName: Fat
+        ExpressionKey: 2
+        SentenceText: '<sprite name="Tear"> <sprite name="Sweat"><sprite name="Sweat">  '
+        Choices: []
+        characterNames:
+        - Fat

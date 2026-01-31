@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5434c58369128c648a5bfbb671206e59, type: 3}
+  m_Name: Food_DIA
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  sceneBackground: {fileID: -1768854372134492381, guid: fb39f8dc8443856428e0007630222494, type: 3}
+  characters:
+  - {fileID: 11400000, guid: 86c95367ccf9c7945af6b07600d8c58d, type: 2}
+  dialogueSentences:
+  - rid: 488350986161619081
+  - rid: 4981921987577249862
+  references:
+    version: 2
+    RefIds:
+    - rid: 488350986161619081
+      type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
+      data:
+        CharacterName: Food
+        ExpressionKey: 0
+        SentenceText: '<sprite name="Happy"> <sprite name="Meat"><sprite name="OK">  '
+        Choices:
+        - ChoiceKey: Happy
+          ResponseExpressionKey: 0
+          ResponseText: 
+          choiceEvents:
+          - Type: 2
+            Value: 10
+          - Type: 0
+            Value: 10
+        - ChoiceKey: Sad
+          ResponseExpressionKey: 0
+          ResponseText: 
+          choiceEvents:
+          - Type: 0
+            Value: 10
+          - Type: 2
+            Value: 10
+        - ChoiceKey: Angry
+          ResponseExpressionKey: 0
+          ResponseText: 
+          choiceEvents:
+          - Type: 0
+            Value: 10
+          - Type: 2
+            Value: 10
+        - ChoiceKey: Neutral
+          ResponseExpressionKey: 0
+          ResponseText: 
+          choiceEvents: []
+        characterNames:
+        - Food
+    - rid: 4981921987577249862
+      type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
+      data:
+        CharacterName: Food
+        ExpressionKey: 0
+        SentenceText: <sprite name="Happy"><sprite name="Love"><sprite name="OK">
+        Choices: []
+        characterNames:
+        - Food

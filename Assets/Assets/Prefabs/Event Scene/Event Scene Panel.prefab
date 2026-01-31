@@ -337,3 +337,4 @@ MonoBehaviour:
   transition: {fileID: 7838505479605652586}
   characters:
   - {fileID: 11400000, guid: b87a23f738cda6047b9754b720d274a0, type: 2}
+  - {fileID: 11400000, guid: 7cb9240141923ea4b82c7ab24daba9cd, type: 2}

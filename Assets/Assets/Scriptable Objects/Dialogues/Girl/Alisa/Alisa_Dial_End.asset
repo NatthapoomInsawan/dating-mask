@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5434c58369128c648a5bfbb671206e59, type: 3}
+  m_Name: Alisa_Dial_End
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  sceneBackground: {fileID: -1768854372134492381, guid: fb39f8dc8443856428e0007630222494, type: 3}
+  characters:
+  - {fileID: 11400000, guid: 6dacc72e1a18a2d43892b102466d0646, type: 2}
+  dialogueSentences:
+  - rid: 4981921973824127048
+  - rid: 4981921973824127049
+  references:
+    version: 2
+    RefIds:
+    - rid: 4981921973824127048
+      type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
+      data:
+        CharacterName: Alisa
+        ExpressionKey: 0
+        SentenceText: '<sprite name="Bull"> <sprite name="Stop"> <sprite name="Sad"> '
+        Choices:
+        - ChoiceKey: Happy
+          ResponseExpressionKey: 0
+          ResponseText: <sprite name="Sad"><sprite name="Bull"><sprite name="?">
+          choiceEvents: []
+        - ChoiceKey: Sad
+          ResponseExpressionKey: 0
+          ResponseText: <sprite name="Shy"><sprite name="OK"><sprite name="OK">
+          choiceEvents: []
+        - ChoiceKey: Angry
+          ResponseExpressionKey: 0
+          ResponseText: <sprite name="Stop"><sprite name="Angry"><sprite name="Sweat">
+          choiceEvents: []
+        - ChoiceKey: Neutral
+          ResponseExpressionKey: 0
+          ResponseText: <sprite name="Point"><sprite name="Bull"><sprite name="?">
+          choiceEvents: []
+        characterNames:
+        - Alisa
+    - rid: 4981921973824127049
+      type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
+      data:
+        CharacterName: Alisa
+        ExpressionKey: 0
+        SentenceText: <sprite name="Sad"><sprite name="OK"><sprite name="Bye">
+        Choices: []
+        characterNames:
+        - Alisa

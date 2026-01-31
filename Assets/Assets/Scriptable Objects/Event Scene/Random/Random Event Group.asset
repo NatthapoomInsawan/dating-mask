@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EventSceneGroup
   EventSceneGroupName: Random
   eventScenes:
-  - {fileID: 11400000, guid: 30158e70a4e90ef418c3c3a74fd9eeaf, type: 2}
-  - {fileID: 11400000, guid: a2e5c9ac4e047a94792f20a35500bc0c, type: 2}
+  - {fileID: 11400000, guid: a42de2ac4f4e5664aace617916e4b6f0, type: 2}
+  - {fileID: 11400000, guid: 5b1f46bb12409d74ba4511649ecd1318, type: 2}
+  - {fileID: 11400000, guid: 3a4278f07f25af14b928b7fe34b5edeb, type: 2}
+  - {fileID: 11400000, guid: 4a0b9fc2df7b5984c9468230ed369e26, type: 2}
+  - {fileID: 11400000, guid: 02522d9bbee5f3642bb9e75f929dfa66, type: 2}
+  - {fileID: 11400000, guid: dd870078a01c88f4d8997cb62e8e20cb, type: 2}
+  - {fileID: 11400000, guid: 18368728997c9934ab2ec0afe87a1d91, type: 2}

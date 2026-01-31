@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab39d586cb6289942b3ad03a861ac170, type: 3}
+  m_Name: Linda
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterData
+  characterName: Linda
+  characterSprites:
+  - ExpressionKey: 0
+    Sprite: {fileID: 5357432335802654263, guid: cb83c4dd8d0c15f4db9a0ba233a57d65, type: 3}
+  - ExpressionKey: 1
+    Sprite: {fileID: 5278916369487996081, guid: 693b70b0d90a6064086bd22ec7a7ed77, type: 3}
+  - ExpressionKey: 2
+    Sprite: {fileID: -5300543087775217355, guid: a42ff38e632d28d4fbc32ccda790bcb8, type: 3}
+  - ExpressionKey: 3
+    Sprite: {fileID: -3860653478687804020, guid: faa3d5adcf070df4f8312ccdd628ac46, type: 3}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab39d586cb6289942b3ad03a861ac170, type: 3}
+  m_Name: Food
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterData
+  characterName: Food
+  characterSprites:
+  - ExpressionKey: 0
+    Sprite: {fileID: 5362735838549604449, guid: f56293c22dd4ffe42876f0c2e9999a2c, type: 3}
+  - ExpressionKey: 1
+    Sprite: {fileID: -7515882341233382396, guid: e7c89f34bddcc744dae22bf0cb89b9e8, type: 3}

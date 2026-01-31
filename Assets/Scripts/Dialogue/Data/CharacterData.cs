@@ -4,19 +4,29 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Dialogue/Character/CharacterData")]
 public class CharacterData : ScriptableObject
 {
+    [Serializable]
+    public enum CharacterExpression
+    {
+        Neutral = 0,
+        Happy = 1,
+        Sad = 2,
+        Angry = 3,
+        Surprised
+    }
+
     #region class
     [Serializable]
-    public struct CharacterExpression
+    public struct CharacterExpressionData
     {
-        public string ExpressionName;
+        public CharacterExpression ExpressionKey;
         public Sprite Sprite;
     }
     #endregion
 
     public string CharacterName => characterName;
-    public CharacterExpression[] CharacterSprites => characterSprites;
+    public CharacterExpressionData[] CharacterSprites => characterSprites;
 
     [Header("Data")]
     [SerializeField] private string characterName;
-    [SerializeField] private CharacterExpression[] characterSprites;
+    [SerializeField] private CharacterExpressionData[] characterSprites;
 }

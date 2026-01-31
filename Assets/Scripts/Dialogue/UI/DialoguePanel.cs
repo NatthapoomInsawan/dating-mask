@@ -1,10 +1,10 @@
 using Cysharp.Threading.Tasks;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static DialogueData;
 
@@ -21,26 +21,29 @@ public class DialoguePanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI characterNameText;
     [SerializeField] private TextMeshProUGUI dialogueSentenceText;
 
+    [SerializeField] private Image sceneBackground;
+
     [SerializeField] private Button nextSentenceButton;
 
     [Header("Data")]
     [SerializeField] private DialogueData dialogueData;
 
-    private List<DialogueCharacter> dialogueCharacters = new ();
+    [Header("Dialouge Settings")]
+    [SerializeField] private int typingDelay = 40;
 
+    private List<DialogueCharacter> dialogueCharacters = new ();
     private List<DialogueChoiceButton> dialogueChoiceButtons = new ();
 
     private Queue<DialogueSentence> sentencesQueue = new Queue<DialogueSentence>();
     
     private DialogueSentence currentSentence;
-
     private DialogueCharacter currentCharacter;
 
     private CancellationTokenSource sentenceDisplayCts;
 
     private void Awake()
     {
-        Init();
+        Init(dialogueData);
 
         nextSentenceButton.onClick.AddListener(() =>
         {
@@ -51,9 +54,19 @@ public class DialoguePanel : MonoBehaviour
         });
     }
 
-    public void Init()
+    public void Init(DialogueData dialogueData)
     {
-        foreach(var charData in dialogueData.GetCharacters())
+        this.dialogueData = dialogueData;
+
+        if (dialogueData.SceneBackground != null)
+        {
+            sceneBackground.sprite = dialogueData.SceneBackground;
+            sceneBackground.gameObject.SetActive(true);
+        }
+        else
+            sceneBackground.gameObject.SetActive(false);
+
+        foreach (var charData in dialogueData.GetCharacters())
         {
             DialogueCharacter dialogueCharacter = Instantiate(dialogueCharacterPrefab, charactersContainer);
             dialogueCharacter.Init(charData);
@@ -96,7 +109,7 @@ public class DialoguePanel : MonoBehaviour
         {
             foreach (char character in sentenceText)
             {
-                if (await UniTask.Delay(30, cancellationToken: cts.Token).SuppressCancellationThrow())
+                if (await UniTask.Delay(typingDelay, cancellationToken: cts.Token).SuppressCancellationThrow())
                     break;
 
                 dialogueSentenceText.text += character;
@@ -130,15 +143,19 @@ public class DialoguePanel : MonoBehaviour
             dialogueChoiceButton.Init(choice, () =>
             {
                 sentenceDisplayCts = new CancellationTokenSource();
-                currentCharacter?.SetCharacterExpression(choice.ResponseExpression);
+                currentCharacter?.SetCharacterExpression(choice.ResponseExpressionKey);
                 DisplaySentenceTask(choice.ResponseText, sentenceDisplayCts).Forget();
 
                 foreach (var button in dialogueChoiceButtons)
                     Destroy(button.gameObject);
+
+                nextSentenceButton.interactable = true;
             });
             
             dialogueChoiceButtons.Add(dialogueChoiceButton);
         }
+
+        nextSentenceButton.interactable = false;
     }
 
 }

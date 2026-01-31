@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
   characterName: Test
   characterSprites:
-  - ExpressionName: idle
+  - ExpressionKey: 0
     Sprite: {fileID: 8625272680425275559, guid: 8d1a80f926fbe40469dfc9f08023baaa, type: 3}
-  - ExpressionName: happy
+  - ExpressionKey: 1
     Sprite: {fileID: 5434015652287353820, guid: 43b8bf754c7ca1941a41ab73390f80da, type: 3}

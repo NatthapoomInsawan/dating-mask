@@ -1,6 +1,7 @@
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using static CharacterData;
 
 public class DialogueCharacter : MonoBehaviour
 {
@@ -14,11 +15,12 @@ public class DialogueCharacter : MonoBehaviour
     public void Init(CharacterData characterData)
     {
         this.characterData = characterData;
+        SetCharacterExpression(CharacterExpression.Neutral);
     }
 
-    public void SetCharacterExpression(string expressionKey)
+    public void SetCharacterExpression(CharacterExpression expressionKey)
     {
-       CharacterData.CharacterExpression characterExpression = characterData.CharacterSprites.FirstOrDefault(spriteData => spriteData.ExpressionName == expressionKey);
+        CharacterExpressionData characterExpression = characterData.CharacterSprites.FirstOrDefault(spriteData => spriteData.ExpressionKey == expressionKey);
 
         if (characterExpression.Sprite == null)
         {

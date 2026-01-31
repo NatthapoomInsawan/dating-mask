@@ -24,16 +24,23 @@ MonoBehaviour:
       type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
       data:
         CharacterName: Test
-        ExpressionKey: idle
+        ExpressionKey: 0
         SentenceText: This is test for first sentence andd I am idle
         Choices:
         - ChoiceKey: Go happy
-          ResponseExpression: happy
+          ResponseExpressionKey: 1
           ResponseText: Okay now I am happy
+        - ChoiceKey: Go Idle
+          ResponseExpressionKey: 0
+          ResponseText: Okay now I am Idle
+        characterNames:
+        - Test
     - rid: 488350986161619082
       type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
       data:
         CharacterName: Test
-        ExpressionKey: idle
+        ExpressionKey: 0
         SentenceText: I'm back To Idle now. This is last sentences
         Choices: []
+        characterNames:
+        - Test

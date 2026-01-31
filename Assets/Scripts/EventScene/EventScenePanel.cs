@@ -15,14 +15,37 @@ public class EventScenePanel : MonoBehaviour
     [SerializeField] private RectTransform eventSceneProgressContainer;
     [SerializeField] private RectTransform selectCharacterContainer;
 
+    [Header("Player Stat")]
+    [SerializeField] private IconFillDial energyFillDial;
+    [SerializeField] private IconFillDial moodFillDial;
+
+    [Header("Transition")]
     [SerializeField] private Image transition;
 
     private List<EventSceneSlot> eventSceneSlots = new ();
 
     private int currentStepIndex = -1;
 
+    private bool isInit;
+
     public void Init(EventSceneManager eventSceneManager, List<EventSceneType> eventScenes)
     {
+        if (!isInit)
+        {
+            energyFillDial.Init(GameplayManager.Instance.GameDataManager.PlayerEnergy, GameplayManager.Instance.GameDataManager.PlayerSettings.MaxEnergy);
+            moodFillDial.Init(GameplayManager.Instance.GameDataManager.PlayerMood, GameplayManager.Instance.GameDataManager.PlayerSettings.MaxMood);
+
+            GameplayManager.Instance.GameDataManager.OnPlayerEnergyChanged += (changedValue) =>
+            {
+                energyFillDial.SetValue(GameplayManager.Instance.GameDataManager.PlayerEnergy);
+            };
+
+            GameplayManager.Instance.GameDataManager.OnPlayerMoodChanged += (changedValue) =>
+            {
+                moodFillDial.SetValue(GameplayManager.Instance.GameDataManager.PlayerMood);
+            };
+        }
+
         eventSceneManager.OnEventSceneChanged -= OnUpdateStep;
         eventSceneManager.OnEventSceneChanged += OnUpdateStep;
 
@@ -37,6 +60,8 @@ public class EventScenePanel : MonoBehaviour
             slot.Init(sceneType);
             eventSceneSlots.Add(slot);
         }
+
+        isInit = true;
     }
 
     public async UniTask<string> SelectCharacter()

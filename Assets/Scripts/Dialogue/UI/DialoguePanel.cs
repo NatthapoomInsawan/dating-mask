@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using TMPro;
+using UnityEditor.U2D.Animation;
 using UnityEngine;
 using UnityEngine.UI;
 using static DialogueData;
@@ -27,6 +28,8 @@ public class DialoguePanel : MonoBehaviour
 
     [SerializeField] private Button nextSentenceButton;
 
+    [SerializeField] private IconFillDial affinityFillDial;
+
     [Header("Data")]
     [SerializeField] private DialogueData dialogueData;
 
@@ -44,6 +47,8 @@ public class DialoguePanel : MonoBehaviour
     private CancellationTokenSource sentenceDisplayCts;
 
     private bool isDialogueCompleted = false;
+
+    private bool isInit;
 
     private void Awake()
     {
@@ -82,7 +87,25 @@ public class DialoguePanel : MonoBehaviour
         gameObject.SetActive(true);
 
         sentencesQueue = new Queue<DialogueSentence>(dialogueData.GetDialogueSentences());
-        
+
+        if (dialogueCharacters.Count == 1 && GameplayManager.Instance.GameDataManager.CharacterDatas.Count(data => data.CharacterName == dialogueCharacters[0].CharacterName) > 0)
+        {
+            affinityFillDial.gameObject.SetActive(true);
+            affinityFillDial.Init(GameplayManager.Instance.GameDataManager.GetCharacterAffinity(dialogueCharacters[0].CharacterName), GameplayManager.Instance.GameDataManager.MaxAffinity);
+        }
+        else
+            affinityFillDial.gameObject.SetActive(false);
+
+        if (!isInit)
+        {
+            GameplayManager.Instance.GameDataManager.OnCharacterAffinityChanged += (changed, characterName) =>
+            {
+                if (characterName == dialogueCharacters[0].CharacterName)
+                    affinityFillDial.SetValue(GameplayManager.Instance.GameDataManager.GetCharacterAffinity(characterName));
+            };
+        }
+
+        isInit = true;
         GetNextSentences();
     }
 

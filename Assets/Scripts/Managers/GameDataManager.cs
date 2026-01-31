@@ -20,9 +20,16 @@ public class CharacterAffinityData
 public class GameDataManager : MonoBehaviour
 {
     public event Action<string> OnCharacterAfftinityFull;
+
+    public event Action<int> OnPlayerEnergyChanged;
+    public event Action<int> OnPlayerMoodChanged;
+    public event Action<int, string> OnCharacterAffinityChanged;
     public int PlayerMood => playerData.Mood;
     public int PlayerEnergy => playerData.Energy;
-    public List<CharacterData> CharacterDatas => characterDatas;
+    public int MaxAffinity => maxAffinity;
+    public PlayerSettings PlayerSettings => playerSettings;
+
+    public IEnumerable<CharacterData> CharacterDatas => characterDatas;
 
     [Header("Character Data")]
     [SerializeField] private List<CharacterData> characterDatas = new ();
@@ -47,6 +54,18 @@ public class GameDataManager : MonoBehaviour
         GameplayManager.Instance.GameEventManager.OnCharacterEventTrigger += OnCharacterEventTrigger;
     }
 
+    public int GetCharacterAffinity(string characterName)
+    {
+        CharacterAffinityData target = characterAffinityDatas.Find(data => data.CharacterName == characterName);
+
+        if (target == null)
+        {
+            Debug.LogWarning($"can't find character name: {characterName}");
+            return 0;
+        }
+        return target.Affinity;
+    }
+
     private void OnPlayerEventTrigger(GameEvent gameEvent)
     {
         switch (gameEvent.Type)
@@ -54,10 +73,12 @@ public class GameDataManager : MonoBehaviour
             case GameEvent.EventType.ModifyMood:
                 playerData.Mood += gameEvent.Value;
                 playerData.Mood = Mathf.Clamp(playerData.Mood, 0, playerSettings.MaxMood);
+                OnPlayerMoodChanged?.Invoke(gameEvent.Value);
                 break;
             case GameEvent.EventType.ModifyEnergy:
                 playerData.Energy += gameEvent.Value;
                 playerData.Energy = Mathf.Clamp(playerData.Energy, 0, playerSettings.MaxEnergy);
+                OnPlayerEnergyChanged?.Invoke(gameEvent.Value);
                 break;
         }
     }
@@ -73,6 +94,7 @@ public class GameDataManager : MonoBehaviour
                     target.Affinity += gameEvent.Value;
                 else
                     Debug.LogWarning($"Can't find character name: {characterName}");
+                OnCharacterAffinityChanged?.Invoke(gameEvent.Value, characterName);
                 break;
         }
 

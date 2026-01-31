@@ -781,6 +781,26 @@ PrefabInstance:
       propertyPath: characters.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3185767839875222652, guid: b404513f2efbaca48b25480af35e39c6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925752035490832583, guid: b404513f2efbaca48b25480af35e39c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925752035490832583, guid: b404513f2efbaca48b25480af35e39c6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925752035490832583, guid: b404513f2efbaca48b25480af35e39c6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925752035490832583, guid: b404513f2efbaca48b25480af35e39c6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5466162444395631469, guid: b404513f2efbaca48b25480af35e39c6, type: 3}
       propertyPath: m_Name
       value: Event Scene Panel
@@ -863,6 +883,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6935933370577814582, guid: b404513f2efbaca48b25480af35e39c6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804617464884303118, guid: b404513f2efbaca48b25480af35e39c6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804617464884303118, guid: b404513f2efbaca48b25480af35e39c6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804617464884303118, guid: b404513f2efbaca48b25480af35e39c6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804617464884303118, guid: b404513f2efbaca48b25480af35e39c6, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

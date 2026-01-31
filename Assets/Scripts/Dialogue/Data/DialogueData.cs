@@ -6,7 +6,6 @@ using static CharacterData;
 [CreateAssetMenu(menuName = "Dialogue/DialogueData/Dialogue")]
 public class DialogueData : ScriptableObject
 {
-
     [Serializable]
     public class DialogueSentence
     {
@@ -43,7 +42,8 @@ public class DialogueData : ScriptableObject
     {
         public string ChoiceKey;
         public CharacterExpression ResponseExpressionKey;
-        public string ResponseText; 
+        public string ResponseText;
+        public List<GameEvent> choiceEvents = new();
     }
 
     public Sprite SceneBackground => sceneBackground;
@@ -68,7 +68,6 @@ public class DialogueData : ScriptableObject
             sentence.CacheCharacterNames(characters);
         }   
     }
-
 #endif
 
 

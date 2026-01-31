@@ -632,8 +632,7 @@ MonoBehaviour:
   characterEventSceneGroups:
   - {fileID: 11400000, guid: 0bec1b1680555914a99013f2f95e38cb, type: 2}
   randomEventSceneGroup: {fileID: 11400000, guid: 8c228569601b8a340ab7abeb138c072a, type: 2}
-  tiredRestEventScene: {fileID: 11400000, guid: be6a56f41a4bedb42a18ef9d0766616f, type: 2}
-  goodRestEventScene: {fileID: 11400000, guid: 024f24283982bc145b97eaf23faefd5c, type: 2}
+  restEventScene: {fileID: 0}
   maxRandomEvent: 2
   maxCharacterEvent: 2
   maxEvents: 4

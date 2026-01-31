@@ -10,6 +10,8 @@ using static DialogueData;
 
 public class DialoguePanel : MonoBehaviour
 {
+    public bool IsDialogueCompleted => isDialogueCompleted;
+
     [Header("Prefabs")]
     [SerializeField] private DialogueCharacter dialogueCharacterPrefab;
     [SerializeField] private DialogueChoiceButton dialogueChoiceButtonPrefab;
@@ -41,12 +43,15 @@ public class DialoguePanel : MonoBehaviour
 
     private CancellationTokenSource sentenceDisplayCts;
 
+    private bool isDialogueCompleted = false;
+
     private void Awake()
     {
-        Init(dialogueData);
-
         nextSentenceButton.onClick.AddListener(() =>
         {
+            if (isDialogueCompleted)
+                return;
+
             if (!sentenceDisplayCts.IsCancellationRequested)
                 CancelToken();
             else
@@ -56,6 +61,7 @@ public class DialoguePanel : MonoBehaviour
 
     public void Init(DialogueData dialogueData)
     {
+        isDialogueCompleted = false;
         this.dialogueData = dialogueData;
 
         if (dialogueData.SceneBackground != null)
@@ -73,6 +79,8 @@ public class DialoguePanel : MonoBehaviour
             dialogueCharacters.Add(dialogueCharacter);
         }
 
+        gameObject.SetActive(true);
+
         sentencesQueue = new Queue<DialogueSentence>(dialogueData.GetDialogueSentences());
         
         GetNextSentences();
@@ -82,6 +90,11 @@ public class DialoguePanel : MonoBehaviour
     {
         if (sentencesQueue.Count == 0)
         {
+            gameObject.SetActive(false);
+            foreach (Transform child in charactersContainer)
+                Destroy(child.gameObject);
+            dialogueCharacters.Clear();
+            isDialogueCompleted = true;
             Debug.Log("Dialogue ended.");
             return;
         }
@@ -145,6 +158,9 @@ public class DialoguePanel : MonoBehaviour
                 sentenceDisplayCts = new CancellationTokenSource();
                 currentCharacter?.SetCharacterExpression(choice.ResponseExpressionKey);
                 DisplaySentenceTask(choice.ResponseText, sentenceDisplayCts).Forget();
+
+                foreach (var choiceEvent in choice.choiceEvents)
+                    GameEventManager.Instance.TriggerCharacterEvents(choiceEvent, currentSentence.CharacterName);
 
                 foreach (var button in dialogueChoiceButtons)
                     Destroy(button.gameObject);

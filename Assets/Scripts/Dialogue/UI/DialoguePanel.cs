@@ -116,21 +116,27 @@ public class DialoguePanel : MonoBehaviour
 
     private async UniTask DisplaySentenceTask(string sentenceText, CancellationTokenSource cts)
     {
-        dialogueSentenceText.text = string.Empty;
+        dialogueSentenceText.text = sentenceText;
+        dialogueSentenceText.maxVisibleCharacters = 0;
+        dialogueSentenceText.ForceMeshUpdate();
 
-        while (dialogueSentenceText.text.Length < sentenceText.Length && !cts.IsCancellationRequested)
+        int totalVisibleCharacters = dialogueSentenceText.textInfo.characterCount;
+        int counter = 0;
+
+        while (counter < totalVisibleCharacters && !cts.IsCancellationRequested)
         {
             foreach (char character in sentenceText)
             {
                 if (await UniTask.Delay(typingDelay, cancellationToken: cts.Token).SuppressCancellationThrow())
                     break;
 
-                dialogueSentenceText.text += character;
+                counter++;
+                dialogueSentenceText.maxVisibleCharacters = counter; 
             }
         }
 
-        if (dialogueSentenceText.text.Length < sentenceText.Length)
-            dialogueSentenceText.text = sentenceText;
+        if (!cts.IsCancellationRequested)
+            dialogueSentenceText.maxVisibleCharacters = totalVisibleCharacters;
     }
 
     private void CancelToken()

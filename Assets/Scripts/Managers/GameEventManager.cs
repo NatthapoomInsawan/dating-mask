@@ -16,7 +16,7 @@ public class GameEvent
     public int Value;
 }
 
-public class GameEventManager : Singleton<GameEventManager>
+public class GameEventManager : MonoBehaviour
 {
     public event Action<GameEvent> OnPlayerEventTrigger;
     public event Action<GameEvent, string> OnCharacterEventTrigger;

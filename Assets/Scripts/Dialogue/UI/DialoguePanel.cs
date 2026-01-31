@@ -160,7 +160,7 @@ public class DialoguePanel : MonoBehaviour
                 DisplaySentenceTask(choice.ResponseText, sentenceDisplayCts).Forget();
 
                 foreach (var choiceEvent in choice.choiceEvents)
-                    GameEventManager.Instance.TriggerCharacterEvents(choiceEvent, currentSentence.CharacterName);
+                    GameplayManager.Instance.GameEventManager.TriggerCharacterEvents(choiceEvent, currentSentence.CharacterName);
 
                 foreach (var button in dialogueChoiceButtons)
                     Destroy(button.gameObject);

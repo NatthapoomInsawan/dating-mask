@@ -17,9 +17,6 @@ public class EventScenePanel : MonoBehaviour
 
     [SerializeField] private Image transition;
 
-    [Header("Characters")]
-    [SerializeField] private List<CharacterData> characters = new ();
-
     private List<EventSceneSlot> eventSceneSlots = new ();
 
     private int currentStepIndex = -1;
@@ -46,7 +43,7 @@ public class EventScenePanel : MonoBehaviour
     {
         CharacterData selectedCharacter = null;
 
-        foreach (var character in characters)
+        foreach (var character in GameplayManager.Instance.GameDataManager.CharacterDatas)
         {
             EventSelectCharacterButton selectCharacterButton = Instantiate(selectCharacterButtonPrefab, selectCharacterContainer);
             selectCharacterButton.Init(character, () =>
@@ -84,7 +81,11 @@ public class EventScenePanel : MonoBehaviour
 
     private void OnUpdateStep()
     {
-        currentStepIndex++;
+        if (GameplayManager.Instance.GameDataManager.PlayerEnergy > 0)
+            currentStepIndex++;
+        else
+            currentStepIndex = eventSceneSlots.Count - 1;
+
         for (int i = 0; i < eventSceneSlots.Count; i++)
             eventSceneSlots[i].SetToggle(i == currentStepIndex);
     }

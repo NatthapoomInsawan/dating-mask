@@ -9,6 +9,13 @@ public class EventSceneManager : MonoBehaviour
 {
     public event Action OnEventSceneChanged;
 
+    [Serializable]
+    private class EndingDialogue
+    {
+        public CharacterData CharacterData;
+        public DialogueData EndDialogueData;
+    }
+
     public enum EventSceneType
     {
         Random,
@@ -30,6 +37,10 @@ public class EventSceneManager : MonoBehaviour
     [SerializeField] private EventScene tiredRestEventScene;
     [SerializeField] private EventScene goodRestEventScene;
 
+    [Header("Game Over")]
+    [SerializeField] private List<EndingDialogue> goodEndDialogues = new();
+    [SerializeField] private DialogueData badEndDialogue;
+
     [Header("Settings")]
     [SerializeField] private int maxRandomEvent = 2;
     [SerializeField] private int maxCharacterEvent = 2;
@@ -40,12 +51,6 @@ public class EventSceneManager : MonoBehaviour
     [SerializeField] private List<EventScene> playedEventScene = new();
 
     private EventScene currentEventScene;
-
-    private void Awake()
-    {
-        Init();
-    }
-
     public void Init()
     {
         ResetEventScene();
@@ -71,8 +76,6 @@ public class EventSceneManager : MonoBehaviour
             else
                 eventType = EventSceneType.Random;
 
-            Debug.Log($"event type {Random.Range(0, 2)}");
-
             switch (eventType)
             {
                 case EventSceneType.Random:
@@ -88,10 +91,10 @@ public class EventSceneManager : MonoBehaviour
 
         eventScenePanel.Init(this, eventQueue.ToList());
 
-        ExcuteEventQueue();
+        ExcuteEventQueue().Forget();
     }
 
-    private async void ExcuteEventQueue()
+    private async UniTaskVoid ExcuteEventQueue()
     {
         if (eventQueue.Count == 0)
         {
@@ -113,15 +116,15 @@ public class EventSceneManager : MonoBehaviour
                 currentEventScene = characterEventSceneGroup.GetRandomEventScene(playedEventScene);
                 break;
             case EventSceneType.Rest:
-                bool isGoodRest = true;
+                bool isGoodRest = GameplayManager.Instance.GameDataManager.PlayerEnergy > 0;
                 currentEventScene = isGoodRest ? goodRestEventScene : tiredRestEventScene;
                 break;
         }
 
-        StartDialogue(currentEventScene);
+        await StartDialogue(currentEventScene);
     }
 
-    private async void StartDialogue(EventScene eventScene)
+    private async UniTask StartDialogue(EventScene eventScene)
     {
         foreach (DialogueData dialogue in eventScene.GetDialogues())
         {
@@ -131,9 +134,57 @@ public class EventSceneManager : MonoBehaviour
         }
 
         foreach (GameEvent gameEvent in eventScene.GetEndEvents())
-            GameEventManager.Instance.TriggerPlayerEvents(gameEvent);
+            GameplayManager.Instance.GameEventManager.TriggerPlayerEvents(gameEvent);
 
         playedEventScene.Add(eventScene);
-        ExcuteEventQueue();
+
+        if (GameplayManager.Instance.GameDataManager.PlayerEnergy == 0)
+        {
+            eventQueue.Clear();
+            eventQueue.Enqueue(EventSceneType.Rest);
+        }
+        
+        if (GameplayManager.Instance.GameDataManager.PlayerMood == 0)
+        {
+            BadEndDialogue();
+            return;
+        }
+
+        if (!GameplayManager.Instance.IsGameStopped)
+            ExcuteEventQueue().Forget();
+    }
+
+    private async void BadEndDialogue()
+    {
+        eventScenePanel.gameObject.SetActive(false);
+
+        dialoguePanel.Init(badEndDialogue);
+
+        await eventScenePanel.Transition();
+
+        await UniTask.WaitUntil(() => dialoguePanel.IsDialogueCompleted);
+        GameplayManager.Instance.RestartGame();
+    }
+
+    public async void GoodEndDialogue(string characterName)
+    {
+        await UniTask.WaitUntil(()=>dialoguePanel.IsDialogueCompleted);
+
+        eventScenePanel.gameObject.SetActive(false);
+
+        DialogueData endDialogueData = goodEndDialogues.Find(data => data.CharacterData.CharacterName == characterName).EndDialogueData;
+
+        if (endDialogueData == null)
+        {
+            Debug.LogError($"No matching Dialogue Data!");
+            GameplayManager.Instance.RestartGame();
+        }
+
+        dialoguePanel.Init(endDialogueData);
+
+        await eventScenePanel.Transition();
+
+        await UniTask.WaitUntil(() => dialoguePanel.IsDialogueCompleted);
+        GameplayManager.Instance.RestartGame();
     }
 }

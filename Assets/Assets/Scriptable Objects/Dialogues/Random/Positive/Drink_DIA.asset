@@ -26,11 +26,11 @@ MonoBehaviour:
       data:
         CharacterName: Food
         ExpressionKey: 0
-        SentenceText: '<sprite name="Happy"> <sprite name="Sweat"><sprite name="OK">  '
+        SentenceText: <sprite name="Happy"><sprite name="Sweat"><sprite name="OK">
         Choices:
         - ChoiceKey: Happy
           ResponseExpressionKey: 1
-          ResponseText: 
+          ResponseText: <sprite name="Flex"><sprite name="Happy"><sprite name="Sweat">
           choiceEvents:
           - Type: 2
             Value: 10
@@ -38,7 +38,7 @@ MonoBehaviour:
             Value: 10
         - ChoiceKey: Sad
           ResponseExpressionKey: 1
-          ResponseText: 
+          ResponseText: <sprite name="Sad"><sprite name="Sweat"><sprite name="Sweat">
           choiceEvents:
           - Type: 0
             Value: 10
@@ -46,7 +46,7 @@ MonoBehaviour:
             Value: 10
         - ChoiceKey: Angry
           ResponseExpressionKey: 1
-          ResponseText: 
+          ResponseText: <sprite name="Flex"><sprite name="Mad"><sprite name="Sweat">
           choiceEvents:
           - Type: 0
             Value: 10
@@ -54,7 +54,7 @@ MonoBehaviour:
             Value: 10
         - ChoiceKey: Neutral
           ResponseExpressionKey: 0
-          ResponseText: 
+          ResponseText: <sprite name="Sweat"><sprite name="Sweat"><sprite name="Sweat">
           choiceEvents: []
         characterNames:
         - Food

@@ -15,4 +15,10 @@ MonoBehaviour:
   characterName: Alisa
   characterSprites:
   - ExpressionKey: 0
-    Sprite: {fileID: -685518941643656212, guid: 710f2b76ad22a1347b13873703abc812, type: 3}
+    Sprite: {fileID: 6693427361103937139, guid: d44a10c4e5c8702418da0602d17bee37, type: 3}
+  - ExpressionKey: 1
+    Sprite: {fileID: 4880075620979414672, guid: 8291774fbc868084b957174e1d0d7aaa, type: 3}
+  - ExpressionKey: 2
+    Sprite: {fileID: 597175398164822037, guid: 9601ab4cf134fa04d8786ff0371142f1, type: 3}
+  - ExpressionKey: 3
+    Sprite: {fileID: -993973907760357140, guid: 4ac5d5bacd7eba640a1617cf79a56a78, type: 3}

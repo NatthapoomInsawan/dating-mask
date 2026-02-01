@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Player Settings
   m_EditorClassIdentifier: Assembly-CSharp::PlayerSettings
   startMood: 60
-  maxMood: 60
+  maxMood: 100
   startEnergy: 60
-  maxEnergy: 60
+  maxEnergy: 100

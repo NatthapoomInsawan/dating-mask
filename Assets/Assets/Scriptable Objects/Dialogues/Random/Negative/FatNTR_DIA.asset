@@ -26,29 +26,29 @@ MonoBehaviour:
       data:
         CharacterName: Fat
         ExpressionKey: 0
-        SentenceText: '<sprite name="Person"> <sprite name="Smug"><sprite name="!">  '
+        SentenceText: <sprite name="Person"><sprite name="Smug"><sprite name="Sweat">
         Choices:
         - ChoiceKey: Happy
           ResponseExpressionKey: 0
-          ResponseText: 
+          ResponseText: <sprite name="Happy"><sprite name="Smug"><sprite name="Sweat">
           choiceEvents:
           - Type: 0
             Value: -10
         - ChoiceKey: Sad
           ResponseExpressionKey: 0
-          ResponseText: 
+          ResponseText: <sprite name="Smirk"><sprite name="Smug"><sprite name="Sweat">
           choiceEvents:
           - Type: 0
             Value: -10
         - ChoiceKey: Angry
           ResponseExpressionKey: 2
-          ResponseText: 
+          ResponseText: <sprite name="!"><sprite name="Angry"><sprite name="Sweat">
           choiceEvents:
           - Type: 2
             Value: -10
         - ChoiceKey: Neutral
           ResponseExpressionKey: 0
-          ResponseText: 
+          ResponseText: <sprite name="Smug"><sprite name="Sweat"><sprite name="Sweat">
           choiceEvents:
           - Type: 0
             Value: -10
@@ -59,7 +59,7 @@ MonoBehaviour:
       data:
         CharacterName: Fat
         ExpressionKey: 2
-        SentenceText: '<sprite name="Tear"> <sprite name="Sweat"><sprite name="Sweat">  '
+        SentenceText: <sprite name="Hot"><sprite name="Sweat"><sprite name="Sweat">
         Choices: []
         characterNames:
         - Fat

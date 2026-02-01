@@ -15,8 +15,8 @@ MonoBehaviour:
   characterName: Dog
   characterSprites:
   - ExpressionKey: 0
-    Sprite: {fileID: 8584303646342281188, guid: d4c678b1af1d48b4f911a8442270bddb, type: 3}
+    Sprite: {fileID: -4154348150017000952, guid: 16ec438bdcdfbf445982cd35c60c05be, type: 3}
   - ExpressionKey: 1
-    Sprite: {fileID: 4157071654836688060, guid: add15b7c62fc5b84689e97951b1bb933, type: 3}
+    Sprite: {fileID: 1245854187798174781, guid: 37833213740e2cc4c8591808f514f9ec, type: 3}
   - ExpressionKey: 3
-    Sprite: {fileID: 4164516079584748885, guid: 03c6386495baaa04496280de8034e764, type: 3}
+    Sprite: {fileID: 4127375536614959279, guid: 16b60fd100188b144bb4e104facf9d60, type: 3}

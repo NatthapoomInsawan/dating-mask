@@ -30,7 +30,7 @@ MonoBehaviour:
         Choices:
         - ChoiceKey: Happy
           ResponseExpressionKey: 0
-          ResponseText: 
+          ResponseText: '<sprite name="Happy"><sprite name="Meat"><sprite name="Sweat">  '
           choiceEvents:
           - Type: 2
             Value: 10
@@ -38,7 +38,7 @@ MonoBehaviour:
             Value: 10
         - ChoiceKey: Sad
           ResponseExpressionKey: 0
-          ResponseText: 
+          ResponseText: '<sprite name="Sad"><sprite name="Meat"><sprite name="Sweat">  '
           choiceEvents:
           - Type: 0
             Value: 10
@@ -46,7 +46,7 @@ MonoBehaviour:
             Value: 10
         - ChoiceKey: Angry
           ResponseExpressionKey: 0
-          ResponseText: 
+          ResponseText: <sprite name="Mad"><sprite name="Meat"><sprite name="Sweat">
           choiceEvents:
           - Type: 0
             Value: 10
@@ -54,7 +54,7 @@ MonoBehaviour:
             Value: 10
         - ChoiceKey: Neutral
           ResponseExpressionKey: 0
-          ResponseText: 
+          ResponseText: <sprite name="Meat"><sprite name="Meat"><sprite name="Meat">
           choiceEvents: []
         characterNames:
         - Food

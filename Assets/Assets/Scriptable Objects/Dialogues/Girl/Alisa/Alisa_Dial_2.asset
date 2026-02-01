@@ -29,21 +29,45 @@ MonoBehaviour:
         SentenceText: '<sprite name="Shy"> <sprite name="beg"> <sprite name="meat"> '
         Choices:
         - ChoiceKey: Happy
-          ResponseExpressionKey: 0
+          ResponseExpressionKey: 1
           ResponseText: <sprite name="Shy"><sprite name="Meat"><sprite name="Sweat">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 1
+            Value: 10
+          - Type: 0
+            Value: -5
+          - Type: 2
+            Value: -15
         - ChoiceKey: Sad
           ResponseExpressionKey: 0
           ResponseText: <sprite name="Sad"><sprite name="Meat"><sprite name="?">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 1
+            Value: -5
+          - Type: 0
+            Value: -10
+          - Type: 2
+            Value: -10
         - ChoiceKey: Angry
-          ResponseExpressionKey: 0
+          ResponseExpressionKey: 3
           ResponseText: <sprite name="Stop"><sprite name="Mad"><sprite name="Meat">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 1
+            Value: -10
+          - Type: 0
+            Value: -15
+          - Type: 2
+            Value: -5
         - ChoiceKey: Neutral
           ResponseExpressionKey: 0
           ResponseText: <sprite name="Angry"><sprite name="Meat"><sprite name="?">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 0
+            Value: -5
+          - Type: 0
+            Value: 10
+          - Type: 0
+            Value: 10
         characterNames:
         - Alisa
     - rid: 4981921973824127049

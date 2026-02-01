@@ -26,25 +26,48 @@ MonoBehaviour:
       data:
         CharacterName: Linda
         ExpressionKey: 0
-        SentenceText: "<sprite name=\"\u0E47Happy\"><sprite name=\"Right\"><sprite
-          name=\"Talk\">"
+        SentenceText: <sprite name="Happy"><sprite name="Right"><sprite name="Talk">
         Choices:
         - ChoiceKey: Happy
           ResponseExpressionKey: 1
           ResponseText: <sprite name="Happy"><sprite name="Kiss"><sprite name="Love">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 1
+            Value: 10
+          - Type: 0
+            Value: -5
+          - Type: 0
+            Value: -15
         - ChoiceKey: Sad
           ResponseExpressionKey: 2
           ResponseText: <sprite name="Sad"><sprite name="Sweat"><sprite name="Sweat">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 1
+            Value: -5
+          - Type: 0
+            Value: -10
+          - Type: 2
+            Value: -10
         - ChoiceKey: Angry
           ResponseExpressionKey: 2
           ResponseText: <sprite name="Tear"><sprite name="Sweat"><sprite name="Sweat">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 1
+            Value: -10
+          - Type: 0
+            Value: -15
+          - Type: 2
+            Value: -5
         - ChoiceKey: Neutral
           ResponseExpressionKey: 0
           ResponseText: <sprite name="Sad"><sprite name="?"><sprite name="?">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 1
+            Value: -5
+          - Type: 0
+            Value: 10
+          - Type: 2
+            Value: 10
         characterNames:
         - Linda
     - rid: 4981921985122271306

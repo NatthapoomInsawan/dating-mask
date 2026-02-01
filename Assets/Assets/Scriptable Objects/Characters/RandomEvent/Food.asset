@@ -15,6 +15,6 @@ MonoBehaviour:
   characterName: Food
   characterSprites:
   - ExpressionKey: 0
-    Sprite: {fileID: 5362735838549604449, guid: f56293c22dd4ffe42876f0c2e9999a2c, type: 3}
+    Sprite: {fileID: -2888509136495857386, guid: a4e31fbe3053b96478ce5443be5b9506, type: 3}
   - ExpressionKey: 1
-    Sprite: {fileID: -7515882341233382396, guid: e7c89f34bddcc744dae22bf0cb89b9e8, type: 3}
+    Sprite: {fileID: -1689342501272574086, guid: 638300c54c5964749a383969d30e0c29, type: 3}

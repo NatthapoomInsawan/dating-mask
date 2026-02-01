@@ -26,11 +26,11 @@ MonoBehaviour:
       data:
         CharacterName: Dog
         ExpressionKey: 0
-        SentenceText: '<sprite name="!"> <sprite name="Dog"><sprite name="Talk">  '
+        SentenceText: <sprite name="!"> <sprite name="Dog"><sprite name="Talk">
         Choices:
         - ChoiceKey: Happy
           ResponseExpressionKey: 1
-          ResponseText: <sprite name="Dog"><sprite name="Happy">
+          ResponseText: <sprite name="Dog"><sprite name="Happy"><sprite name="Talk">
           choiceEvents:
           - Type: 2
             Value: 10
@@ -38,15 +38,15 @@ MonoBehaviour:
             Value: 10
         - ChoiceKey: Sad
           ResponseExpressionKey: 0
-          ResponseText: 
+          ResponseText: <sprite name="Dog"><sprite name="?"><sprite name="?">
           choiceEvents: []
         - ChoiceKey: Angry
           ResponseExpressionKey: 0
-          ResponseText: 
+          ResponseText: <sprite name="Dog"><<sprite name="Talk"><sprite name="Talk">
           choiceEvents: []
         - ChoiceKey: Neutral
           ResponseExpressionKey: 0
-          ResponseText: 
+          ResponseText: <sprite name="Dog"><sprite name="Talk"><sprite name="?">
           choiceEvents: []
         characterNames:
         - Dog

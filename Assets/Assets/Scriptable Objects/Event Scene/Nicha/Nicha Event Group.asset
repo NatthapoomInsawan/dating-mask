@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c4cc11247b7a542afb1d86ec4370ba, type: 3}
+  m_Name: Nicha Event Group
+  m_EditorClassIdentifier: Assembly-CSharp::EventSceneGroup
+  EventSceneGroupName: Nicha
+  eventScenes:
+  - {fileID: 11400000, guid: 563c0f64bb05cd24087c263cbfed0d1b, type: 2}
+  - {fileID: 11400000, guid: e45f076af83288740b192586e3c99c5d, type: 2}
+  - {fileID: 11400000, guid: 1788c0e65736f814b869676ec6c92e60, type: 2}
+  - {fileID: 11400000, guid: 6d6c1d51163e4124997ce9ae15871406, type: 2}

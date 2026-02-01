@@ -15,6 +15,6 @@ MonoBehaviour:
   characterName: Fat
   characterSprites:
   - ExpressionKey: 0
-    Sprite: {fileID: -442910437312892594, guid: 636b8cfc69a38044e8a17ddc53823256, type: 3}
+    Sprite: {fileID: -1093406708127525177, guid: a4cfa0d842e171740bc60053144ac960, type: 3}
   - ExpressionKey: 2
-    Sprite: {fileID: -3819216305040647417, guid: ee03ae592e8729c46995995c2875b24a, type: 3}
+    Sprite: {fileID: 505867517227805863, guid: 5d6b9868f3cf406428baaa1635f2e1c9, type: 3}

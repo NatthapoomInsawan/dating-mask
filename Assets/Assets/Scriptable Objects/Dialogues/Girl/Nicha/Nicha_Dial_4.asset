@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5434c58369128c648a5bfbb671206e59, type: 3}
+  m_Name: Nicha_Dial_4
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  sceneBackground: {fileID: -1768854372134492381, guid: fb39f8dc8443856428e0007630222494, type: 3}
+  characters:
+  - {fileID: 11400000, guid: 0e8938ef218b5084ab3edc7f355d8cf2, type: 2}
+  dialogueSentences:
+  - rid: 4981921973824127048
+  - rid: 4981921973824127049
+  references:
+    version: 2
+    RefIds:
+    - rid: 4981921973824127048
+      type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
+      data:
+        CharacterName: Nicha
+        ExpressionKey: 0
+        SentenceText: 
+        Choices:
+        - ChoiceKey: Happy
+          ResponseExpressionKey: 1
+          ResponseText: 
+          choiceEvents:
+          - Type: 1
+            Value: -10
+          - Type: 0
+            Value: -5
+          - Type: 2
+            Value: -15
+        - ChoiceKey: Sad
+          ResponseExpressionKey: 0
+          ResponseText: 
+          choiceEvents:
+          - Type: 1
+            Value: 0
+          - Type: 0
+            Value: -10
+          - Type: 2
+            Value: -10
+        - ChoiceKey: Angry
+          ResponseExpressionKey: 3
+          ResponseText: 
+          choiceEvents:
+          - Type: 1
+            Value: 10
+          - Type: 0
+            Value: -15
+          - Type: 2
+            Value: -5
+        - ChoiceKey: Neutral
+          ResponseExpressionKey: 0
+          ResponseText: <sprite name="Pat"><sprite name="Cat"><sprite name="?">
+          choiceEvents:
+          - Type: 1
+            Value: -5
+          - Type: 0
+            Value: 10
+          - Type: 2
+            Value: 10
+        characterNames:
+        - Nicha
+    - rid: 4981921973824127049
+      type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
+      data:
+        CharacterName: Nicha
+        ExpressionKey: 0
+        SentenceText: <sprite name="Laugh"><sprite name="Bye"><sprite name="Bye">
+        Choices: []
+        characterNames:
+        - Nicha

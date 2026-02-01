@@ -25,33 +25,57 @@ MonoBehaviour:
       type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
       data:
         CharacterName: Alisa
-        ExpressionKey: 0
-        SentenceText: '<sprite name="Point"> <sprite name="Pat"> <sprite name="Shy"> '
+        ExpressionKey: 2
+        SentenceText: '<sprite name="Talk"> <sprite name="Stop"><sprite name="Shy"> '
         Choices:
         - ChoiceKey: Happy
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="Pat"><sprite name="Shy"><sprite name="Love">
-          choiceEvents: []
+          ResponseExpressionKey: 3
+          ResponseText: <sprite name="Stop"><sprite name="Stop"><sprite name="Sad">
+          choiceEvents:
+          - Type: 1
+            Value: 0
+          - Type: 0
+            Value: -5
+          - Type: 2
+            Value: -15
         - ChoiceKey: Sad
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="Shy"><sprite name="Pat"><sprite name="?">
-          choiceEvents: []
+          ResponseExpressionKey: 1
+          ResponseText: <sprite name="Shy"><sprite name="OK"><sprite name="OK">
+          choiceEvents:
+          - Type: 1
+            Value: 10
+          - Type: 0
+            Value: -10
+          - Type: 0
+            Value: -10
         - ChoiceKey: Angry
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="Stop"><sprite name="Stop"><sprite name="Angry">
-          choiceEvents: []
+          ResponseExpressionKey: 3
+          ResponseText: <sprite name="Stop"><sprite name="Angry"><sprite name="Sweat">
+          choiceEvents:
+          - Type: 1
+            Value: -10
+          - Type: 0
+            Value: -15
+          - Type: 2
+            Value: -5
         - ChoiceKey: Neutral
           ResponseExpressionKey: 0
-          ResponseText: <sprite name="Sad"><sprite name="?"><sprite name="?">
-          choiceEvents: []
+          ResponseText: <sprite name="Point"><sprite name="Bull"><sprite name="?">
+          choiceEvents:
+          - Type: 1
+            Value: -5
+          - Type: 0
+            Value: 10
+          - Type: 2
+            Value: 10
         characterNames:
         - Alisa
     - rid: 4981921973824127049
       type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
       data:
         CharacterName: Alisa
-        ExpressionKey: 0
-        SentenceText: <sprite name="Shy"><sprite name="Bye"><sprite name="Bye">
+        ExpressionKey: 2
+        SentenceText: <sprite name="Sad"><sprite name="OK"><sprite name="Bye">
         Choices: []
         characterNames:
         - Alisa

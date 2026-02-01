@@ -31,19 +31,43 @@ MonoBehaviour:
         - ChoiceKey: Happy
           ResponseExpressionKey: 3
           ResponseText: <sprite name="Angry"><sprite name="Point"><sprite name="Right">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 1
+            Value: -10
+          - Type: 0
+            Value: -5
+          - Type: 2
+            Value: -15
         - ChoiceKey: Sad
           ResponseExpressionKey: 2
           ResponseText: <sprite name="Cry"><sprite name="Cry"><sprite name="Sweat">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 1
+            Value: 10
+          - Type: 0
+            Value: -10
+          - Type: 2
+            Value: -10
         - ChoiceKey: Angry
           ResponseExpressionKey: 2
           ResponseText: <sprite name="Tear"><sprite name="Cry"><sprite name="Sweat">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 1
+            Value: -5
+          - Type: 0
+            Value: -15
+          - Type: 2
+            Value: -5
         - ChoiceKey: Neutral
           ResponseExpressionKey: 2
           ResponseText: <sprite name="Tear"><sprite name="Mad"><sprite name="Angry">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 1
+            Value: -5
+          - Type: 0
+            Value: 10
+          - Type: 2
+            Value: 10
         characterNames:
         - Linda
     - rid: 4981921985122271302

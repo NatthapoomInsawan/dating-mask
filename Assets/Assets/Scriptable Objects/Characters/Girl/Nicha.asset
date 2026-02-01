@@ -15,10 +15,10 @@ MonoBehaviour:
   characterName: Nicha
   characterSprites:
   - ExpressionKey: 0
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 6694666123760258271, guid: b77e7f3c2d460734bbd25173d54a14c0, type: 3}
   - ExpressionKey: 1
-    Sprite: {fileID: 0}
+    Sprite: {fileID: -4705788031145897374, guid: 2b824dc7aebb2fb44843e92e9a5a8d44, type: 3}
   - ExpressionKey: 2
-    Sprite: {fileID: 0}
+    Sprite: {fileID: 6417926802690370743, guid: c184a782f94684d409c37397ccfb6bf6, type: 3}
   - ExpressionKey: 3
-    Sprite: {fileID: 0}
+    Sprite: {fileID: -695891904566670036, guid: 32b251da70c3d2f4b977362127af7d26, type: 3}

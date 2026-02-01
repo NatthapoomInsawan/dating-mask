@@ -15,8 +15,8 @@ MonoBehaviour:
   characterName: Black Guy
   characterSprites:
   - ExpressionKey: 0
-    Sprite: {fileID: 7292369538106479869, guid: 721955f2bf01de743861703a62a3e4dd, type: 3}
+    Sprite: {fileID: 7292369538106479869, guid: ba975f5e9f2816c4da666db487429b54, type: 3}
   - ExpressionKey: 1
-    Sprite: {fileID: -4934760710574895494, guid: 73a597ee7a4947e46964472f5544360e, type: 3}
+    Sprite: {fileID: -3410800938846754198, guid: c5279d38f2f4dda40a8ddbb60e93e868, type: 3}
   - ExpressionKey: 3
-    Sprite: {fileID: -8225032556443234681, guid: 2097d64ded1eb65438a3e8283d65dc19, type: 3}
+    Sprite: {fileID: -8225032556443234681, guid: 88b5e1e0f01363447a9765aac227abde, type: 3}

@@ -14,7 +14,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   sceneBackground: {fileID: 0}
   characters: []
-  dialogueSentences: []
+  dialogueSentences:
+  - rid: 4981921987577249865
+  - rid: 4981921987577249866
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 4981921987577249865
+      type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
+      data:
+        CharacterName: 
+        ExpressionKey: 2
+        SentenceText: 
+        Choices:
+        - ChoiceKey: Happy
+          ResponseExpressionKey: 2
+          ResponseText: 
+          choiceEvents: []
+        - ChoiceKey: Sad
+          ResponseExpressionKey: 1
+          ResponseText: 
+          choiceEvents: []
+        - ChoiceKey: Angry
+          ResponseExpressionKey: 2
+          ResponseText: 
+          choiceEvents: []
+        - ChoiceKey: Neutral
+          ResponseExpressionKey: 0
+          ResponseText: 
+          choiceEvents: []
+        characterNames: []
+    - rid: 4981921987577249866
+      type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
+      data:
+        CharacterName: 
+        ExpressionKey: 0
+        SentenceText: 
+        Choices: []
+        characterNames: []

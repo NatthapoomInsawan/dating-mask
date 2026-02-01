@@ -26,24 +26,50 @@ MonoBehaviour:
       data:
         CharacterName: Alisa
         ExpressionKey: 0
-        SentenceText: '<sprite name="Bull"> <sprite name="Stop"> <sprite name="Sad"> '
+        SentenceText: '<sprite name="Point"> <sprite name="Pat"> <sprite name="Shy"> '
         Choices:
         - ChoiceKey: Happy
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="Sad"><sprite name="Bull"><sprite name="?">
-          choiceEvents: []
+          ResponseExpressionKey: 1
+          ResponseText: <sprite name="Pat"><sprite name="Shy"><sprite name="Love">
+          choiceEvents:
+          - Type: 1
+            Value: 10
+          - Type: 0
+            Value: -5
+          - Type: 2
+            Value: -15
         - ChoiceKey: Sad
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="Shy"><sprite name="OK"><sprite name="OK">
-          choiceEvents: []
+          ResponseExpressionKey: 2
+          ResponseText: <sprite name="Shy"><sprite name="Pat"><sprite name="?">
+          choiceEvents:
+          - Type: 1
+            Value: -5
+          - Type: 0
+            Value: -10
+          - Type: 2
+            Value: -10
+          - Type: 0
+            Value: 0
         - ChoiceKey: Angry
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="Stop"><sprite name="Angry"><sprite name="Sweat">
-          choiceEvents: []
+          ResponseExpressionKey: 3
+          ResponseText: <sprite name="Stop"><sprite name="Stop"><sprite name="Angry">
+          choiceEvents:
+          - Type: 0
+            Value: -10
+          - Type: 0
+            Value: -15
+          - Type: 0
+            Value: -5
         - ChoiceKey: Neutral
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="Point"><sprite name="Bull"><sprite name="?">
-          choiceEvents: []
+          ResponseExpressionKey: 2
+          ResponseText: <sprite name="Sad"><sprite name="?"><sprite name="?">
+          choiceEvents:
+          - Type: 0
+            Value: -5
+          - Type: 0
+            Value: 10
+          - Type: 0
+            Value: 10
         characterNames:
         - Alisa
     - rid: 4981921973824127049
@@ -51,7 +77,7 @@ MonoBehaviour:
       data:
         CharacterName: Alisa
         ExpressionKey: 0
-        SentenceText: <sprite name="Sad"><sprite name="OK"><sprite name="Bye">
+        SentenceText: <sprite name="Shy"><sprite name="Bye"><sprite name="Bye">
         Choices: []
         characterNames:
         - Alisa

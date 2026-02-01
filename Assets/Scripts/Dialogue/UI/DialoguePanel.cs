@@ -178,6 +178,7 @@ public class DialoguePanel : MonoBehaviour
 
     private void InitChoice(List<DialogueChoice> choices)
     {
+        choiceContainer.gameObject.SetActive(true);
         foreach (var choice in choices)
         {
             DialogueChoiceButton dialogueChoiceButton = Instantiate(dialogueChoiceButtonPrefab, choiceContainer);
@@ -195,6 +196,7 @@ public class DialoguePanel : MonoBehaviour
                         GameplayManager.Instance.GameEventManager.TriggerPlayerEvents(choiceEvent);
                 }
 
+                choiceContainer.gameObject.SetActive(false);
                 foreach (var button in dialogueChoiceButtons)
                     Destroy(button.gameObject);
 

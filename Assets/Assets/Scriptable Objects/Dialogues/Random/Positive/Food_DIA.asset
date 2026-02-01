@@ -55,7 +55,11 @@ MonoBehaviour:
         - ChoiceKey: Neutral
           ResponseExpressionKey: 0
           ResponseText: <sprite name="Meat"><sprite name="Meat"><sprite name="Meat">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 0
+            Value: 0
+          - Type: 2
+            Value: 0
         characterNames:
         - Food
     - rid: 4981921987577249862

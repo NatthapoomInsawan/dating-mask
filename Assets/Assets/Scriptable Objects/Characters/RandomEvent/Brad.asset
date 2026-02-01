@@ -10,13 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab39d586cb6289942b3ad03a861ac170, type: 3}
-  m_Name: Black_Guy
+  m_Name: Brad
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
-  characterName: Black Guy
+  characterName: Brad
   characterSprites:
   - ExpressionKey: 0
-    Sprite: {fileID: 7292369538106479869, guid: ba975f5e9f2816c4da666db487429b54, type: 3}
-  - ExpressionKey: 1
-    Sprite: {fileID: -3410800938846754198, guid: c5279d38f2f4dda40a8ddbb60e93e868, type: 3}
-  - ExpressionKey: 4
-    Sprite: {fileID: -2224785960311588053, guid: 85775b1566b36254a8d5efd96a877ded, type: 3}
+    Sprite: {fileID: -7520687975817626773, guid: 52f1b7b51aba4a145918bf6d8f3c1245, type: 3}

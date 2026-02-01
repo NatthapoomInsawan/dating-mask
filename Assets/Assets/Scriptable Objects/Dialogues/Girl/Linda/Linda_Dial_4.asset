@@ -26,7 +26,7 @@ MonoBehaviour:
       data:
         CharacterName: Linda
         ExpressionKey: 0
-        SentenceText: <sprite name="Happy"><sprite name="Right"><sprite name="Talk">
+        SentenceText: <sprite name="Happy"><sprite name="Right"><sprite name="Point">
         Choices:
         - ChoiceKey: Happy
           ResponseExpressionKey: 1

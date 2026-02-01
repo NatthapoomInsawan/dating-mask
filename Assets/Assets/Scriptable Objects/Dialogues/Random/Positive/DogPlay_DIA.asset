@@ -32,22 +32,34 @@ MonoBehaviour:
           ResponseExpressionKey: 1
           ResponseText: <sprite name="Dog"><sprite name="Happy"><sprite name="Talk">
           choiceEvents:
-          - Type: 2
-            Value: 10
           - Type: 0
             Value: 10
+          - Type: 2
+            Value: 0
         - ChoiceKey: Sad
           ResponseExpressionKey: 0
           ResponseText: <sprite name="Dog"><sprite name="?"><sprite name="?">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 0
+            Value: 0
+          - Type: 2
+            Value: 0
         - ChoiceKey: Angry
           ResponseExpressionKey: 0
           ResponseText: <sprite name="Dog"><<sprite name="Talk"><sprite name="Talk">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 0
+            Value: 0
+          - Type: 0
+            Value: 0
         - ChoiceKey: Neutral
           ResponseExpressionKey: 0
           ResponseText: <sprite name="Dog"><sprite name="Talk"><sprite name="?">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 0
+            Value: 0
+          - Type: 0
+            Value: 0
         characterNames:
         - Dog
     - rid: 4981921987577249862

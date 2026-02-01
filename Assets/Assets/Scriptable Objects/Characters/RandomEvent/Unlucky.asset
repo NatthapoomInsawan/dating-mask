@@ -10,13 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab39d586cb6289942b3ad03a861ac170, type: 3}
-  m_Name: Black_Guy
+  m_Name: Unlucky
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
-  characterName: Black Guy
+  characterName: Unlucky
   characterSprites:
-  - ExpressionKey: 0
-    Sprite: {fileID: 7292369538106479869, guid: ba975f5e9f2816c4da666db487429b54, type: 3}
-  - ExpressionKey: 1
-    Sprite: {fileID: -3410800938846754198, guid: c5279d38f2f4dda40a8ddbb60e93e868, type: 3}
-  - ExpressionKey: 4
-    Sprite: {fileID: -2224785960311588053, guid: 85775b1566b36254a8d5efd96a877ded, type: 3}
+  - ExpressionKey: 3
+    Sprite: {fileID: -586440182367085889, guid: d128c91a7af8df04d8cd3ab75f3bbd9e, type: 3}
+  - ExpressionKey: 2
+    Sprite: {fileID: 3954480283350355716, guid: 2fc31db578c3ae349b9eb8687607d2a3, type: 3}

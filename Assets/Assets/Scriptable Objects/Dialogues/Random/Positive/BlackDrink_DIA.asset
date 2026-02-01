@@ -29,27 +29,37 @@ MonoBehaviour:
         SentenceText: '<sprite name="Person"> <sprite name="Beg"><sprite name="Sweat">  '
         Choices:
         - ChoiceKey: Happy
-          ResponseExpressionKey: 0
+          ResponseExpressionKey: 1
           ResponseText: '<sprite name="Flex"> <sprite name="Person"><sprite name="OK">  '
           choiceEvents:
+          - Type: 0
+            Value: 10
           - Type: 2
             Value: 10
         - ChoiceKey: Sad
-          ResponseExpressionKey: 0
+          ResponseExpressionKey: 1
           ResponseText: '<sprite name="Flex"><sprite name="Person"><sprite name="Victory">  '
           choiceEvents:
           - Type: 2
             Value: 10
           - Type: 0
-            Value: 10
+            Value: 0
         - ChoiceKey: Angry
           ResponseExpressionKey: 0
           ResponseText: '<sprite name="Person"><sprite name="OK"><sprite name="Victory">  '
-          choiceEvents: []
+          choiceEvents:
+          - Type: 0
+            Value: 0
+          - Type: 2
+            Value: 0
         - ChoiceKey: Neutral
           ResponseExpressionKey: 0
           ResponseText: <sprite name="Flex"><sprite name="Flex"><sprite name="Flex">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 0
+            Value: 0
+          - Type: 2
+            Value: 0
         characterNames:
         - Black Guy
     - rid: 4981921987577249862

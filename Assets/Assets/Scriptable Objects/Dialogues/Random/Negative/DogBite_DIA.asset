@@ -43,7 +43,11 @@ MonoBehaviour:
         - ChoiceKey: Neutral
           ResponseExpressionKey: 0
           ResponseText: <sprite name="Dog"><sprite name="?"><sprite name="?">
-          choiceEvents: []
+          choiceEvents:
+          - Type: 0
+            Value: -10
+          - Type: 2
+            Value: -10
         characterNames:
         - Dog
     - rid: 4981921987577249862

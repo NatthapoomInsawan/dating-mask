@@ -18,6 +18,7 @@ MonoBehaviour:
   dialogueSentences:
   - rid: 4981921985122271305
   - rid: 4981921985122271306
+  - rid: 8964223768780865609
   references:
     version: 2
     RefIds:
@@ -27,43 +28,24 @@ MonoBehaviour:
         CharacterName: Linda
         ExpressionKey: 0
         SentenceText: <sprite name="Happy"><sprite name="Right"><sprite name="Talk">
-        Choices:
-        - ChoiceKey: Happy
-          ResponseExpressionKey: 1
-          ResponseText: <sprite name="Shy"><sprite name="Love"><sprite name="Love">
-          choiceEvents:
-          - Type: 1
-            Value: 10
-          - Type: 0
-            Value: -5
-          - Type: 2
-            Value: -15
-        - ChoiceKey: Sad
-          ResponseExpressionKey: 2
-          ResponseText: <sprite name="Sad"><sprite name="Sweat"><sprite name="Sweat">
-          choiceEvents:
-          - Type: 0
-            Value: 0
-          - Type: 0
-            Value: 0
-          - Type: 0
-            Value: 0
-        - ChoiceKey: Angry
-          ResponseExpressionKey: 2
-          ResponseText: <sprite name="Tear"><sprite name="Sweat"><sprite name="Sweat">
-          choiceEvents: []
-        - ChoiceKey: Neutral
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="Sad"><sprite name="?"><sprite name="?">
-          choiceEvents: []
+        Choices: []
         characterNames:
         - Linda
     - rid: 4981921985122271306
       type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
       data:
         CharacterName: Linda
-        ExpressionKey: 0
-        SentenceText: <sprite name="Kiss"><sprite name="Beg"><sprite name="Love">
+        ExpressionKey: 1
+        SentenceText: <sprite name="Shy"><sprite name="Love"><sprite name="!">
+        Choices: []
+        characterNames:
+        - Linda
+    - rid: 8964223768780865609
+      type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
+      data:
+        CharacterName: Linda
+        ExpressionKey: 1
+        SentenceText: <sprite name="Kiss"><sprite name="Love"><sprite name="Love">
         Choices: []
         characterNames:
         - Linda

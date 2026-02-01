@@ -26,11 +26,11 @@ MonoBehaviour:
       data:
         CharacterName: Nicha
         ExpressionKey: 0
-        SentenceText: 
+        SentenceText: <sprite name="Smirk"><sprite name="Beg"><sprite name="Money">
         Choices:
         - ChoiceKey: Happy
-          ResponseExpressionKey: 1
-          ResponseText: 
+          ResponseExpressionKey: 3
+          ResponseText: <sprite name="Angry"><sprite name="Angry"><sprite name="Angry">
           choiceEvents:
           - Type: 1
             Value: -10
@@ -39,8 +39,8 @@ MonoBehaviour:
           - Type: 2
             Value: -15
         - ChoiceKey: Sad
-          ResponseExpressionKey: 0
-          ResponseText: 
+          ResponseExpressionKey: 3
+          ResponseText: <sprite name="Angry"><sprite name="Mad"><sprite name="Money">
           choiceEvents:
           - Type: 1
             Value: -10
@@ -49,8 +49,8 @@ MonoBehaviour:
           - Type: 2
             Value: -10
         - ChoiceKey: Angry
-          ResponseExpressionKey: 3
-          ResponseText: 
+          ResponseExpressionKey: 1
+          ResponseText: <sprite name="Smug"><sprite name="Laugh"><sprite name="Money">
           choiceEvents:
           - Type: 1
             Value: 10
@@ -59,8 +59,8 @@ MonoBehaviour:
           - Type: 2
             Value: -5
         - ChoiceKey: Neutral
-          ResponseExpressionKey: 0
-          ResponseText: 
+          ResponseExpressionKey: 3
+          ResponseText: <sprite name="Angry"><sprite name="Mad"><sprite name="Mad">
           choiceEvents:
           - Type: 1
             Value: -5
@@ -74,8 +74,8 @@ MonoBehaviour:
       type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
       data:
         CharacterName: Nicha
-        ExpressionKey: 0
-        SentenceText: <sprite name="Laugh"><sprite name="Bye"><sprite name="Bye">
+        ExpressionKey: 1
+        SentenceText: <sprite name="Smug"><sprite name="Laugh"><sprite name="Bye">
         Choices: []
         characterNames:
         - Nicha

@@ -18,6 +18,7 @@ MonoBehaviour:
   dialogueSentences:
   - rid: 4981921985122271305
   - rid: 4981921985122271306
+  - rid: 8964223768780865608
   references:
     version: 2
     RefIds:
@@ -26,7 +27,7 @@ MonoBehaviour:
       data:
         CharacterName: Nicha
         ExpressionKey: 0
-        SentenceText: 
+        SentenceText: <sprite name="Smug"><sprite name="Beg"><sprite name="Couple">
         Choices: []
         characterNames:
         - Nicha
@@ -34,8 +35,17 @@ MonoBehaviour:
       type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
       data:
         CharacterName: Nicha
+        ExpressionKey: 1
+        SentenceText: <sprite name="Shy"><sprite name="!"><sprite name="!">
+        Choices: []
+        characterNames:
+        - Nicha
+    - rid: 8964223768780865608
+      type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
+      data:
+        CharacterName: Nicha
         ExpressionKey: 0
-        SentenceText: 
+        SentenceText: <sprite name="Smug"><sprite name="Couple"><sprite name="Love">
         Choices: []
         characterNames:
         - Nicha

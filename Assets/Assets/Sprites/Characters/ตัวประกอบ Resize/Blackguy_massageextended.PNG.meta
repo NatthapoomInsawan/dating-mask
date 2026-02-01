@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 88b5e1e0f01363447a9765aac227abde
+guid: 85775b1566b36254a8d5efd96a877ded
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8225032556443234681
-    second: Blackguy_massage_0
+      213: -2224785960311588053
+    second: Blackguy_massageextended_0
   - first:
-      213: 1808482785823309177
-    second: Blackguy_massage_1
+      213: 7159787467374862633
+    second: Blackguy_massageextended_1
   - first:
-      213: 7105392382882065056
-    second: Blackguy_massage_2
+      213: -2001850254061066918
+    second: Blackguy_massageextended_2
+  - first:
+      213: 7058998926499367449
+    second: Blackguy_massageextended_3
+  - first:
+      213: -474844285739624650
+    second: Blackguy_massageextended_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,12 +125,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Blackguy_massage_0
+      name: Blackguy_massageextended_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1240
+        width: 1915
         height: 1754
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -134,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78e8d2fc770dadd80800000000000000
-      internalID: -8225032556443234681
+      spriteID: b2bf95ed4f8ff11e0800000000000000
+      internalID: -2224785960311588053
       vertices: []
       indices: 
       edges: []
@@ -144,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 61e37b7f74bfbe14cb53c85e61de5a4e
+    spriteID: e6ceac97a8bdcd54699c8bafa09cc039
     internalID: 0
     vertices: []
     indices: 
@@ -154,9 +160,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1240.0,"y":1754.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1915.0,"y":1754.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Blackguy_massage_0: -8225032556443234681
+      Blackguy_massageextended_0: -2224785960311588053
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

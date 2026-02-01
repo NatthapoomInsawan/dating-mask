@@ -29,8 +29,8 @@ MonoBehaviour:
         SentenceText: <sprite name="Point"> <sprite name="Couple"> <sprite name="Punch">
         Choices:
         - ChoiceKey: Happy
-          ResponseExpressionKey: 1
-          ResponseText: <sprite name="Laugh"><sprite name="Mad"><sprite name="Punch">
+          ResponseExpressionKey: 3
+          ResponseText: <sprite name="Angry"><sprite name="Mad"><sprite name="Punch">
           choiceEvents:
           - Type: 1
             Value: 0
@@ -39,7 +39,7 @@ MonoBehaviour:
           - Type: 2
             Value: -15
         - ChoiceKey: Sad
-          ResponseExpressionKey: 0
+          ResponseExpressionKey: 2
           ResponseText: <sprite name="Sad"><sprite name="Point"><sprite name="Punch">
           choiceEvents:
           - Type: 1
@@ -49,8 +49,8 @@ MonoBehaviour:
           - Type: 2
             Value: -10
         - ChoiceKey: Angry
-          ResponseExpressionKey: 3
-          ResponseText: <sprite name="Happy"><sprite name="Punch"><sprite name="Love">
+          ResponseExpressionKey: 1
+          ResponseText: <sprite name="Smug"><sprite name="Punch"><sprite name="Love">
           choiceEvents:
           - Type: 1
             Value: 5
@@ -59,8 +59,8 @@ MonoBehaviour:
           - Type: 2
             Value: -5
         - ChoiceKey: Neutral
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="Sad"><sprite name="Punch"><sprite name="Sweat">
+          ResponseExpressionKey: 3
+          ResponseText: <sprite name="Angry"><sprite name="Mad"><sprite name="Mad">
           choiceEvents:
           - Type: 1
             Value: -5

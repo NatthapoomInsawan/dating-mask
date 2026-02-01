@@ -26,7 +26,7 @@ MonoBehaviour:
       data:
         CharacterName: 
         ExpressionKey: 0
-        SentenceText: I'm so tired. with all of this.
+        SentenceText: '<sprite name="Sad"> <sprite name="Tear"> <sprite name="Cry"> '
         Choices: []
         characterNames: []
     - rid: 488351001519587401
@@ -34,7 +34,7 @@ MonoBehaviour:
       data:
         CharacterName: 
         ExpressionKey: 0
-        SentenceText: I don't want to see other people anymore.
+        SentenceText: '<sprite name="Person"> <sprite name="Talk"> <sprite name="Stop"> '
         Choices: []
         characterNames: []
     - rid: 488351001874792585

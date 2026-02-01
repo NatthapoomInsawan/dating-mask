@@ -16,4 +16,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a362ee1ba32e10047b844a81b23f32c1, type: 2}
   endEvents:
   - Type: 2
-    Value: 100
+    Value: 40
+  - Type: 0
+    Value: 40

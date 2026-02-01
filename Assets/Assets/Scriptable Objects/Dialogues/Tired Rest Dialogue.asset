@@ -25,7 +25,7 @@ MonoBehaviour:
       data:
         CharacterName: 
         ExpressionKey: 0
-        SentenceText: I'm so tired.
+        SentenceText: '<sprite name="Hot"> <sprite name="Sweat"> <sprite name="Sleep"> '
         Choices: []
         characterNames: []
     - rid: 488351001519587401
@@ -33,6 +33,6 @@ MonoBehaviour:
       data:
         CharacterName: 
         ExpressionKey: 0
-        SentenceText: I want to sleep now.
+        SentenceText: '<sprite name="Sleep"> <sprite name="Bed"> <sprite name="Bed"> '
         Choices: []
         characterNames: []

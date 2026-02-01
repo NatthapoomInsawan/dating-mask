@@ -43,7 +43,7 @@ MonoBehaviour:
           - Type: 2
             Value: 10
           - Type: 0
-            Value: 0
+            Value: 10
         - ChoiceKey: Angry
           ResponseExpressionKey: 0
           ResponseText: '<sprite name="Person"><sprite name="OK"><sprite name="Victory">  '

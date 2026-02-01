@@ -1008,7 +1008,7 @@ MonoBehaviour:
   goodRestEventScene: {fileID: 11400000, guid: 024f24283982bc145b97eaf23faefd5c, type: 2}
   goodEndDialogues:
   - CharacterData: {fileID: 11400000, guid: 6dacc72e1a18a2d43892b102466d0646, type: 2}
-    EndDialogueData: {fileID: 11400000, guid: 97b4ce66ccffd194e854070e3d30f07f, type: 2}
+    EndDialogueData: {fileID: 11400000, guid: 1ace7d74efcb2bd4292a4ceae5f87a90, type: 2}
   - CharacterData: {fileID: 11400000, guid: 7cb9240141923ea4b82c7ab24daba9cd, type: 2}
     EndDialogueData: {fileID: 11400000, guid: 9399eccb265979b488cc5cca97c4f8ee, type: 2}
   - CharacterData: {fileID: 11400000, guid: 0e8938ef218b5084ab3edc7f355d8cf2, type: 2}
@@ -1426,14 +1426,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Start Panel
       objectReference: {fileID: 0}
-    - target: {fileID: 3666899216328881492, guid: d9bc8535dcaea414eb1dbd4bd24518dd, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5511088440254941253, guid: d9bc8535dcaea414eb1dbd4bd24518dd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1360742578}
+    - target: {fileID: 5511088440254941253, guid: d9bc8535dcaea414eb1dbd4bd24518dd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Init
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

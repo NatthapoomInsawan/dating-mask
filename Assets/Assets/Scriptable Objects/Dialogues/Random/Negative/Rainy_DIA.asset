@@ -37,27 +37,29 @@ MonoBehaviour:
           - Type: 2
             Value: 0
         - ChoiceKey: Sad
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="Smirk"><sprite name="Smug"><sprite name="Sweat">
+          ResponseExpressionKey: 2
+          ResponseText: <sprite name="Sad"><sprite name="Rain"><sprite name="Rain">
           choiceEvents:
           - Type: 0
             Value: -10
-          - Type: 0
-            Value: -10
+          - Type: 2
+            Value: 0
         - ChoiceKey: Angry
           ResponseExpressionKey: 2
-          ResponseText: <sprite name="!"><sprite name="Angry"><sprite name="Sweat">
-          choiceEvents:
-          - Type: 2
-            Value: -10
-        - ChoiceKey: Neutral
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="Smug"><sprite name="Sweat"><sprite name="Sweat">
+          ResponseText: <sprite name="Angry"><sprite name="Rain"><sprite name="Rain">
           choiceEvents:
           - Type: 0
             Value: -10
           - Type: 2
+            Value: 0
+        - ChoiceKey: Neutral
+          ResponseExpressionKey: 2
+          ResponseText: <sprite name="Rain"><sprite name="Rain"><sprite name="Rain">
+          choiceEvents:
+          - Type: 0
             Value: -10
+          - Type: 2
+            Value: 0
         characterNames:
         - Unlucky
     - rid: 4981921987577249864
@@ -65,7 +67,7 @@ MonoBehaviour:
       data:
         CharacterName: Unlucky
         ExpressionKey: 2
-        SentenceText: <sprite name="Hot"><sprite name="Sweat"><sprite name="Sweat">
+        SentenceText: <sprite name="Rain"><sprite name="Rain"><sprite name="Rain">
         Choices: []
         characterNames:
         - Unlucky

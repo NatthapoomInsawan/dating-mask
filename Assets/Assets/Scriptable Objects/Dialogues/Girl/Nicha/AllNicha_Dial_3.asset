@@ -10,64 +10,72 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5434c58369128c648a5bfbb671206e59, type: 3}
-  m_Name: Brad_DIA_3
+  m_Name: AllNicha_Dial_3
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
   sceneBackground: {fileID: -1768854372134492381, guid: fb39f8dc8443856428e0007630222494, type: 3}
   characters:
-  - {fileID: 11400000, guid: 3cc787ddf54e9b645a8d82e8da28be20, type: 2}
+  - {fileID: 11400000, guid: 0e8938ef218b5084ab3edc7f355d8cf2, type: 2}
   dialogueSentences:
-  - rid: 4981921987577249863
-  - rid: 4981921987577249864
+  - rid: 8964223768780865605
+  - rid: 8964223768780865606
   references:
     version: 2
     RefIds:
-    - rid: 4981921987577249863
+    - rid: 8964223768780865605
       type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
       data:
-        CharacterName: Brad
+        CharacterName: Nicha
         ExpressionKey: 0
-        SentenceText: <sprite name="Person"><sprite name="Smug"><sprite name="Sweat">
+        SentenceText: <sprite name="Victory"> <sprite name="Happy"> <sprite name="OK">
         Choices:
         - ChoiceKey: Happy
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="Happy"><sprite name="Smug"><sprite name="Sweat">
+          ResponseExpressionKey: 1
+          ResponseText: <sprite name="Happy"> <sprite name="Victory"> <sprite name="OK">
           choiceEvents:
+          - Type: 1
+            Value: 10
           - Type: 0
-            Value: -10
+            Value: -5
           - Type: 2
-            Value: 0
+            Value: -15
         - ChoiceKey: Sad
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="Smirk"><sprite name="Smug"><sprite name="Sweat">
+          ResponseExpressionKey: 2
+          ResponseText: <sprite name="Sad"> <sprite name="Victory"> <sprite name="OK">
           choiceEvents:
+          - Type: 1
+            Value: 0
           - Type: 0
             Value: -10
           - Type: 2
-            Value: 0
+            Value: -10
         - ChoiceKey: Angry
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="!"><sprite name="Angry"><sprite name="Sweat">
+          ResponseExpressionKey: 3
+          ResponseText: <sprite name="Sad"> <sprite name="OK"> <sprite name="OK">
           choiceEvents:
-          - Type: 0
+          - Type: 1
             Value: -10
+          - Type: 0
+            Value: -15
           - Type: 2
-            Value: 0
+            Value: -5
         - ChoiceKey: Neutral
-          ResponseExpressionKey: 0
-          ResponseText: <sprite name="Smug"><sprite name="Sweat"><sprite name="Sweat">
+          ResponseExpressionKey: 2
+          ResponseText: <sprite name="Sad"> <sprite name="OK"> <sprite name="OK">
           choiceEvents:
+          - Type: 1
+            Value: -5
           - Type: 0
-            Value: -10
+            Value: 10
           - Type: 2
-            Value: -10
+            Value: 10
         characterNames:
-        - Brad
-    - rid: 4981921987577249864
+        - Nicha
+    - rid: 8964223768780865606
       type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
       data:
-        CharacterName: Brad
+        CharacterName: Nicha
         ExpressionKey: 0
-        SentenceText: <sprite name="Laugh"><sprite name="Laugh"><sprite name="Laugh">
+        SentenceText: <sprite name="Happy"> <sprite name="Victory"> <sprite name="Bye">
         Choices: []
         characterNames:
-        - Brad
+        - Nicha

@@ -33,7 +33,7 @@ MonoBehaviour:
           ResponseText: <sprite name="Dog"><sprite name="Happy"><sprite name="Talk">
           choiceEvents:
           - Type: 0
-            Value: 10
+            Value: 15
           - Type: 2
             Value: 0
         - ChoiceKey: Sad

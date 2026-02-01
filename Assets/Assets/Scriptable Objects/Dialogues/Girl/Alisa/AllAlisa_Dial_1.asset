@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5434c58369128c648a5bfbb671206e59, type: 3}
+  m_Name: AllAlisa_Dial_1
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueData
+  sceneBackground: {fileID: -1768854372134492381, guid: fb39f8dc8443856428e0007630222494, type: 3}
+  characters:
+  - {fileID: 11400000, guid: 6dacc72e1a18a2d43892b102466d0646, type: 2}
+  dialogueSentences:
+  - rid: 4981921987577249865
+  - rid: 4981921987577249866
+  references:
+    version: 2
+    RefIds:
+    - rid: 4981921987577249865
+      type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
+      data:
+        CharacterName: Alisa
+        ExpressionKey: 2
+        SentenceText: <sprite name="Talk"> <sprite name="Sweat"> <sprite name="Sad">
+        Choices:
+        - ChoiceKey: Happy
+          ResponseExpressionKey: 3
+          ResponseText: <sprite name="Angry"> <sprite name="Mad"> <sprite name="Mad">
+          choiceEvents:
+          - Type: 1
+            Value: -10
+          - Type: 0
+            Value: -5
+          - Type: 2
+            Value: -15
+        - ChoiceKey: Sad
+          ResponseExpressionKey: 1
+          ResponseText: <sprite name="Happy"> <sprite name="Happy"> <sprite name="Happy">
+          choiceEvents:
+          - Type: 1
+            Value: 10
+          - Type: 0
+            Value: -10
+          - Type: 2
+            Value: -10
+        - ChoiceKey: Angry
+          ResponseExpressionKey: 0
+          ResponseText: <sprite name="Happy"> <sprite name="Swaet"> <sprite name="Sweat">
+          choiceEvents:
+          - Type: 0
+            Value: 5
+          - Type: 0
+            Value: -15
+          - Type: 0
+            Value: -5
+        - ChoiceKey: Neutral
+          ResponseExpressionKey: 2
+          ResponseText: <sprite name="Mad"> <sprite name="Sad"> <sprite name="Sad">
+          choiceEvents:
+          - Type: 1
+            Value: -5
+          - Type: 0
+            Value: 10
+          - Type: 2
+            Value: 10
+        characterNames:
+        - Alisa
+    - rid: 4981921987577249866
+      type: {class: DialogueData/DialogueSentence, ns: , asm: Assembly-CSharp}
+      data:
+        CharacterName: Alisa
+        ExpressionKey: 0
+        SentenceText: <sprite name="Happy"> <sprite name="Victory"> <sprite name="Bye">
+        Choices: []
+        characterNames:
+        - Alisa

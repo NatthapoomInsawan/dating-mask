@@ -25,47 +25,47 @@ MonoBehaviour:
       data:
         CharacterName: 
         ExpressionKey: 0
-        SentenceText: 
+        SentenceText: <sprite name="Victory"> <sprite name="Happy"> <sprite name="OK">
         Choices:
-        - ChoiceKey: 
+        - ChoiceKey: Happy
           ResponseExpressionKey: 1
-          ResponseText: 
+          ResponseText: <sprite name="Happy"> <sprite name="Victory"> <sprite name="OK">
           choiceEvents:
+          - Type: 1
+            Value: 10
           - Type: 0
             Value: 0
-          - Type: 0
+          - Type: 2
             Value: 0
-          - Type: 0
-            Value: 0
-        - ChoiceKey: 
+        - ChoiceKey: Sad
           ResponseExpressionKey: 2
-          ResponseText: 
+          ResponseText: <sprite name="Sad"> <sprite name="Victory"> <sprite name="OK">
           choiceEvents:
-          - Type: 0
+          - Type: 1
             Value: 0
           - Type: 0
             Value: 0
-          - Type: 0
+          - Type: 2
             Value: 0
-        - ChoiceKey: 
+        - ChoiceKey: Angry
           ResponseExpressionKey: 3
-          ResponseText: 
+          ResponseText: <sprite name="Sad"> <sprite name="OK"> <sprite name="OK">
           choiceEvents:
+          - Type: 1
+            Value: -10
           - Type: 0
-            Value: 0
-          - Type: 0
-            Value: 0
-          - Type: 0
-            Value: 0
-        - ChoiceKey: 
-          ResponseExpressionKey: 0
-          ResponseText: 
+            Value: -15
+          - Type: 2
+            Value: -5
+        - ChoiceKey: Neutral
+          ResponseExpressionKey: 2
+          ResponseText: <sprite name="Sad"> <sprite name="OK"> <sprite name="OK">
           choiceEvents:
-          - Type: 0
+          - Type: 1
             Value: -5
           - Type: 0
             Value: 10
-          - Type: 0
+          - Type: 2
             Value: 10
         characterNames: []
     - rid: 8964223768780865606
@@ -73,6 +73,6 @@ MonoBehaviour:
       data:
         CharacterName: 
         ExpressionKey: 0
-        SentenceText: 
+        SentenceText: <sprite name="Happy"> <sprite name="Victory"> <sprite name="Bye">
         Choices: []
         characterNames: []

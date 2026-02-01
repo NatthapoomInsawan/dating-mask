@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Alisa Event 3
   m_EditorClassIdentifier: Assembly-CSharp::EventScene
   dialogues:
-  - {fileID: 11400000, guid: 4aae7e8625156f8438a8220e647df3af, type: 2}
+  - {fileID: 11400000, guid: 97b4ce66ccffd194e854070e3d30f07f, type: 2}
   endEvents: []

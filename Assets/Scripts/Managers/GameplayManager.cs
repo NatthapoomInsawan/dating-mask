@@ -8,8 +8,10 @@ public class GameplayManager : Singleton<GameplayManager>
     public bool IsGameStopped => isGameStop;
     public GameDataManager GameDataManager => gameDataManager;
     public GameEventManager GameEventManager => gameEventManager;
+    public AudioManager AudioManager => audioManager;
 
     [Header("Manager References")]
+    [SerializeField] private AudioManager audioManager;
     [SerializeField] private GameDataManager gameDataManager;
     [SerializeField] private GameEventManager gameEventManager;
     [SerializeField] private EventSceneManager eventSceneManager;
@@ -33,6 +35,7 @@ public class GameplayManager : Singleton<GameplayManager>
 
     private void GameStart()
     {
+        AudioManager.PlayBGM("silly");
         isGameStop = false;
         gameDataManager.OnCharacterAfftinityFull += (characterName) =>
         {

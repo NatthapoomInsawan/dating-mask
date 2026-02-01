@@ -24,6 +24,7 @@ public class DialogueChoiceButton : MonoBehaviour
     {
         choiceButton.onClick.AddListener(() =>
         {
+            GameplayManager.Instance.AudioManager.PlaySFX("click");
             onClick?.Invoke();
             choiceButton.interactable = false;
         });

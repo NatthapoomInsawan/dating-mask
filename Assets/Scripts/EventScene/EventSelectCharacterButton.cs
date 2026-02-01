@@ -15,6 +15,7 @@ public class EventSelectCharacterButton : MonoBehaviour
         characterImage.sprite = characterData.CharacterSprites.FirstOrDefault(c => c.ExpressionKey == CharacterExpression.Neutral).Sprite;
         button.onClick.AddListener(() =>
         {
+            GameplayManager.Instance.AudioManager.PlaySFX("click");
             onclick?.Invoke();
         });
     }

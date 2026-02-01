@@ -148,14 +148,11 @@ public class DialoguePanel : MonoBehaviour
 
         while (counter < totalVisibleCharacters && !cts.IsCancellationRequested)
         {
-            foreach (char character in sentenceText)
-            {
-                if (await UniTask.Delay(typingDelay, cancellationToken: cts.Token).SuppressCancellationThrow())
-                    break;
-
-                counter++;
-                dialogueSentenceText.maxVisibleCharacters = counter; 
-            }
+            if (await UniTask.Delay(typingDelay, cancellationToken: cts.Token).SuppressCancellationThrow())
+                break;
+            counter++;
+            dialogueSentenceText.maxVisibleCharacters = counter;
+            GameplayManager.Instance.AudioManager.PlaySFX("speak");
         }
 
         dialogueSentenceText.maxVisibleCharacters = totalVisibleCharacters;

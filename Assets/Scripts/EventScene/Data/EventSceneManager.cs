@@ -156,6 +156,7 @@ public class EventSceneManager : MonoBehaviour
 
     private async void BadEndDialogue()
     {
+        GameplayManager.Instance.AudioManager.PlayBGM("bad_end");
         eventScenePanel.gameObject.SetActive(false);
 
         dialoguePanel.Init(badEndDialogue);
@@ -168,6 +169,7 @@ public class EventSceneManager : MonoBehaviour
 
     public async void GoodEndDialogue(string characterName)
     {
+        GameplayManager.Instance.AudioManager.PlayBGM("good_end");
         await UniTask.WaitUntil(()=>dialoguePanel.IsDialogueCompleted);
 
         eventScenePanel.gameObject.SetActive(false);
@@ -183,7 +185,6 @@ public class EventSceneManager : MonoBehaviour
         dialoguePanel.Init(endDialogueData);
 
         await eventScenePanel.Transition();
-
         await UniTask.WaitUntil(() => dialoguePanel.IsDialogueCompleted);
         GameplayManager.Instance.RestartGame();
     }
